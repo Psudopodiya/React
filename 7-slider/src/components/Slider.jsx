@@ -20,16 +20,16 @@ export const Slider = (props) => {
             <Box sx={{display:'flex', flexDirection:'column', alignItems:'center'}}>
                 <Box sx={{display:'flex', flexDirection:'column', alignItems:'center', padding:3}}>
                     <Box sx={{padding:3}}>
-                        <Avatar alt={currentPerson.name} src="{currentPerson.image}" sx={{height: 300, width: 300}}/>
+                        <Avatar alt={currentPerson.name} src={currentPerson.image} sx={{height: 300, width: 300}}/>
                         {currentPerson.name}
                     </Box>
                     <Box sx={{display:'flex', flexDirection:'row', gap:4}}>
                         <Box sx={{alignItems:'left'}}>
-                            <Button onClick={()=>handleClick('prev')}>Previous</Button>
+                            <Button onClick={()=>handleClick('prev')} startIcon={<NavigateBefore/>}></Button>
                         </Box>
                         {currentPerson.title}
                         <Box sx={{alignItems:'right'}}>
-                            <Button onClick={()=>handleClick('next')}>Next</Button>
+                            <Button onClick={()=>handleClick('next')} endIcon={<NavigateNext/>}></Button>
                         </Box>
                     </Box>
                 </Box>
